@@ -11,7 +11,7 @@ function countNegativeValue(arr) {
     for (let k = 0; k < arr.length; k++) {
         let value = arr[k]
         if(value < 0){
-            count = count + 1 
+            count = count + 1;
         }
     }
     return count
