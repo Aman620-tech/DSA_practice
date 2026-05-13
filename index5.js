@@ -2,22 +2,30 @@
 
 // let a = [4, 2, 40, 10, 8, 30];
 // let a = [1, 2, 3, 4, 9, 77, 8, 756, 56, 4, 4, 32, 7, 0];
-let a = [10,  8, 5 ];
+let a = [10,20,20];
 
 console.log({ secondLargest: findSecondLargest(a,) })
 function findSecondLargest(arr, val) {
-    let largestValue = arr[0]
-    let secondLargest = -Infinity
-    for (let i = 0; i < arr.length; i++) {
-        let value = arr[i]
-        if (value > largestValue) { // if largestValue is smaller 
-            secondLargest = largestValue
-            largestValue = value
-        } else if (value > secondLargest && value < largestValue) {
-            console.log({ value })
-            secondLargest = value
+    if (arr.length > 0 && arr.length > 2) {
+        let largestValue = arr[0]
+        let secondLargest = -Infinity
+        for (let i = 0; i < arr.length; i++) {
+            let value = arr[i]
+            if (value > largestValue) { // if largestValue is smaller 
+                secondLargest = largestValue
+                largestValue = value
+            } else if (value > secondLargest && value < largestValue) {
+                console.log({ value })
+                secondLargest = value
+            }
         }
+        return secondLargest
+
+    } else {
+        return null
     }
+    //  think  about the cases
+
     // below code is of no use , in this logic was to use 2 loops but that's not good
     // for(let i = 0 ; i < arr.length;i++){
     //     let value = arr[i]
@@ -27,6 +35,5 @@ function findSecondLargest(arr, val) {
     //         // console.log({ secondLargest })
     //     }
     // }
-    return secondLargest
 
 }
