@@ -16,17 +16,3 @@ function digitCount() {
 
 
 
-// function digitCount(number) {
-//     let count = 0
-//     let n = number
-//     let run = true
-//     while (run) {
-//         if (n == 0) {
-//             run = false
-//             break
-//         }
-//         n = Math.floor(n / 10)
-//         count++
-//     }
-//     return count
-// }
