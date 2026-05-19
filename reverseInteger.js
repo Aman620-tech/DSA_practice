@@ -1,6 +1,6 @@
 //  reverse an integer
 
-let no = -123456;
+let no = 214748364;
 
 console.log({ reverseInteger: reverseInteger(no) })
 
@@ -13,5 +13,7 @@ function reverseInteger(n) {
         rev = Math.floor(rev * 10) + rem
         n = Math.floor(n / 10)
     }
-    return copy > 0 ? rev : -rev
+    // let limit = Math.pow(2, 31)
+    let limit = 2 ** 31
+    return rev > limit || rev < -limit ? 0 : copy > 0 ? rev : -rev
 }
